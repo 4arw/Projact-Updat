@@ -1,0 +1,361 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HealthMate - Diet</title>
+    <link rel="stylesheet" href="Home.css">
+    <style>
+        .tool-section {
+          margin: 2rem 0;
+          padding: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          background-color: #f9f9f9;
+        }
+      
+        .tool-section h3 {
+          margin-bottom: 1rem;
+        }
+      
+        .calorie-form input[type="text"],
+        .calorie-form input[type="number"] {
+          padding: 8px;
+          margin: 5px 0;
+          width: 100%;
+          border: 1px solid #aaa;
+          border-radius: 4px;
+        }
+      
+        .calorie-form input[type="submit"] {
+          background-color: #2196F3; /* Changed from #4CAF50 */
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          margin-top: 10px;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+      
+        .calorie-form input[type="submit"]:hover {
+          background-color: #1976D2; /* Changed from #45a049 */
+        }
+      
+        .recipe-gallery {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 1.5rem;
+          padding: 1rem 0;
+        }
+      
+        .recipe-box {
+          border: 1px solid #ddd;
+          border-radius: 12px;
+          overflow: hidden;
+          background: #fff;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+          text-align: center;
+          position: relative;
+        }
+      
+        .recipe-box img {
+          width: 100%;
+          height: 160px;
+          object-fit: cover;
+        }
+      
+        .recipe-box label {
+          display: block;
+          padding: 0.5rem;
+          font-weight: bold;
+          cursor: pointer;
+          color: #2196F3; /* Changed from #4CAF50 */
+          transition: color 0.2s;
+        }
+      
+        .recipe-box label:hover {
+          color: #1976D2; /* Changed from #388E3C */
+        }
+      
+        /* Hide checkboxes */
+        .recipe-toggle {
+          display: none;
+        }
+      
+        .recipe-details {
+          display: none;
+          padding: 1rem;
+          text-align: left;
+          background: #f9f9f9;
+          border-top: 1px solid #ddd;
+        }
+      
+        .recipe-toggle:checked + label + .recipe-details {
+          display: block;
+        }
+      
+        .recipe-details ul {
+          margin: 0.5rem 0;
+          padding-left: 1.2rem;
+        }
+      </style>      
+
+
+<body>
+    <header>
+        <div class="top-bar">
+        <div class="branding">
+        <img src="IMG_5912[1].png" alt="HealthMate Logo" class="logo">
+        <span class="brand-small">HealthMate</span>
+        
+        </div>
+        
+        <div class="main-title">Diet</div>
+        </div>
+        <br><br><br><br>
+        <nav>
+        <a href="index.html">Home</a>
+        <a href="exercises.html">Exercises</a>
+        <a href="diet.html">Diet</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="gym.html">GYM</a>
+        <a href="watch.html">Watch</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        </nav>
+        </header>
+
+    <main>
+        <!-- Other diet content above... -->
+    
+        <!-- Calorie Calculator Section -->
+        <section class="tool-section">
+          <h3>Calorie Calculator</h3>
+          <form class="calorie-form">
+            <label for="food">Food Name:</label>
+            <input type="text" id="food" name="food" placeholder="e.g., Apple" required />
+    
+            <label for="weight">Weight (grams):</label>
+            <input type="number" id="weight" name="weight" placeholder="e.g., 100" required />
+    
+            <input type="submit" value="Calculate " />
+          </form>
+        </section>
+    
+        <h3> Healthy delicious recipes</h3>
+
+</div>
+<h3>🍴 Healthy Meals</h3>
+<div class="recipe-gallery">
+
+     <!-- Oatmeal Bowl -->
+  <div class="recipe-box">
+    <input type="checkbox" id="oatmeal" class="recipe-toggle">
+    <label for="oatmeal">
+      <img src="out bowl.jpg" alt="Oatmeal Bowl">
+      Oatmeal Bowl
+    </label>
+    <div class="recipe-details">
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+        <li>Oats, banana, almond butter</li>
+        <li>Chia seeds, cinnamon, almond milk</li>
+      </ul>
+      <p><strong>Preparation:</strong> Cook oats, top with fruits and almond butter.</p>
+    </div>
+  </div>
+
+<!-- Grilled Chicken Salad -->
+<div class="recipe-box">
+    <input type="checkbox" id="chicken-salad" class="recipe-toggle">
+    <label for="chicken-salad">
+      <img src="grilled salad.jpg" alt="Grilled Chicken Salad">
+      Grilled Chicken Salad
+    </label>
+    <div class="recipe-details">
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+        <li>Chicken breast, grilled</li>
+        <li>Spinach, avocado, cherry tomatoes</li>
+        <li>Olive oil, salt, pepper</li>
+      </ul>
+      <p><strong>Preparation:</strong> Mix ingredients in a bowl, drizzle olive oil, and toss.</p>
+    </div>
+  </div>
+
+  <!-- Avocado Toast -->
+  <div class="recipe-box">
+    <input type="checkbox" id="avocado-toast" class="recipe-toggle">
+    <label for="avocado-toast">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=60" alt="Avocado Toast">
+      Avocado Toast
+    </label>
+    <div class="recipe-details">
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+        <li>Whole grain bread</li>
+        <li>Mashed avocado, lemon juice</li>
+        <li>Chili flakes, poached egg (optional)</li>
+      </ul>
+      <p><strong>Preparation:</strong> Toast bread, spread avocado, top with seasoning.</p>
+    </div>
+  </div>
+
+  <!-- Quinoa Veggie Bowl -->
+  <div class="recipe-box">
+    <input type="checkbox" id="quinoa" class="recipe-toggle">
+    <label for="quinoa">
+      <img src="Quinoa bowl.jpg" alt="Quinoa Bowl">
+      Quinoa Veggie Bowl
+    </label>
+    <div class="recipe-details">
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+        <li>Cooked quinoa, roasted vegetables</li>
+        <li>Hummus, lemon juice</li>
+        <li>Fresh herbs</li>
+      </ul>
+      <p><strong>Preparation:</strong> Mix cooked quinoa with veggies, top with hummus and herbs.</p>
+    </div>
+  </div>
+
+    <!-- Yogurt Parfait -->
+    <div class="recipe-box">
+        <input type="checkbox" id="parfait" class="recipe-toggle">
+        <label for="parfait">
+          <img src="Yogurt Parfait.jpg" alt="Yogurt Parfait">
+          Yogurt Parfait
+        </label>
+        <div class="recipe-details">
+          <p><strong>Ingredients:</strong></p>
+          <ul>
+            <li>Greek yogurt, granola</li>
+            <li>Strawberries, blueberries</li>
+            <li>Honey</li>
+          </ul>
+          <p><strong>Preparation:</strong> Layer ingredients in a glass, drizzle with honey.</p>
+        </div>
+      </div>
+
+  <!-- Baked Salmon & Veggies -->
+  <div class="recipe-box">
+    <input type="checkbox" id="salmon" class="recipe-toggle">
+    <label for="salmon">
+      <img src="Salmon with Veggies.jpg" alt="Salmon with Veggies">
+      Baked Salmon & Veggies
+    </label>
+    <div class="recipe-details">
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+        <li>Salmon fillet, broccoli, carrots</li>
+        <li>Olive oil, lemon, garlic</li>
+        <li>Salt, pepper</li>
+      </ul>
+      <p><strong>Preparation:</strong> Bake salmon and veggies at 200°C for 20 minutes.</p>
+    </div>
+  </div>
+</div>
+
+<h3>🥪 Healthy Snacks</h3>
+<div class="recipe-gallery">
+  <!-- Hummus & Veggie Sticks -->
+  <div class="recipe-box">
+    <input type="checkbox" id="hummus" class="recipe-toggle">
+    <label for="hummus">
+      <img src="Hummus & Veggies.jpg" alt="Hummus & Veggies">
+      Hummus & Veggies
+    </label>
+    <div class="recipe-details">
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+        <li>Carrots, cucumber, bell peppers</li>
+        <li>Store-bought or homemade hummus</li>
+      </ul>
+      <p><strong>Preparation:</strong> Slice veggies and serve with a bowl of hummus.</p>
+    </div>
+  </div>
+
+  <!-- Energy Bites -->
+  <div class="recipe-box">
+    <input type="checkbox" id="energy-bites" class="recipe-toggle">
+    <label for="energy-bites">
+      <img src="Energy balls.jpg" alt="Energy Balls">
+      Energy Bites
+    </label>
+    <div class="recipe-details">
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+        <li>Oats, peanut butter, honey</li>
+        <li>Flax seeds, dark chocolate chips</li>
+      </ul>
+      <p><strong>Preparation:</strong> Mix all, roll into balls, chill for 30 minutes.</p>
+    </div>
+  </div>
+</div>
+
+<h3>🥤 Healthy Drinks</h3>
+<div class="recipe-gallery">
+
+    <!-- Fruit Smoothie -->
+  <div class="recipe-box">
+    <input type="checkbox" id="smoothie" class="recipe-toggle">
+    <label for="smoothie">
+      <img src="smoothie.jpg" alt="Fruit Smoothie">
+      Fruit Smoothie
+    </label>
+    <div class="recipe-details">
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+        <li>Mixed berries, banana</li>
+        <li>Greek yogurt, almond milk</li>
+        <li>Honey (optional)</li>
+      </ul>
+      <p><strong>Preparation:</strong> Blend all ingredients until smooth.</p>
+    </div>
+  </div>
+
+  <!-- Lemon Mint Water -->
+  <div class="recipe-box">
+    <input type="checkbox" id="lemon-mint" class="recipe-toggle">
+    <label for="lemon-mint">
+      <img src="lemon ment water.jpg" alt="Lemon Mint Water">
+      Lemon Mint Water
+    </label>
+    <div class="recipe-details">
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+        <li>Lemon slices, mint leaves</li>
+        <li>Ice, cold water</li>
+      </ul>
+      <p><strong>Preparation:</strong> Combine ingredients in a jar and chill before drinking.</p>
+    </div>
+  </div>
+
+  <!-- Green Smoothie -->
+  <div class="recipe-box">
+    <input type="checkbox" id="green-smoothie" class="recipe-toggle">
+    <label for="green-smoothie">
+      <img src="Green Smoothie.jpg" alt="Green Smoothie">
+      Green Smoothie
+    </label>
+    <div class="recipe-details">
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+        <li>Spinach, banana, almond milk</li>
+        <li>Chia seeds, mango (optional)</li>
+      </ul>
+      <p><strong>Preparation:</strong> Blend all ingredients until smooth and serve cold.</p>
+    </div>
+  </div>
+</div>
+
+
+
+      </main>
+
+
+    <footer>
+        <p>&copy; 2025 HealthMate. All rights reserved.</p>
+    </footer>
+</body>
+</html>

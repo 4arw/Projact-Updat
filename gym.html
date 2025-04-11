@@ -1,0 +1,341 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Find GYMs Near You - HealthMate</title>
+  <link rel="stylesheet" href="Home.css">
+  <style>
+    /* Your existing CSS styles */
+    table {
+      width: 100%;
+      margin-top: 40px;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    table th {
+      background-color: #1f6d91;
+      color: white;
+    }
+
+    .gym-section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #f5f5f5;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .gym-section h2 {
+      color: #0077cc;
+      margin-bottom: 20px;
+    }
+
+    .gym-list {
+      margin-top: 30px;
+    }
+
+    .gym-item {
+      background-color: #fff;
+      border-left: 6px solid #0077cc;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="top-bar">
+      <div class="branding">
+        <img src="IMG_5912[1].png" alt="HealthMate Logo" class="logo">
+        <span class="brand-small">HealthMate</span>
+      </div>
+      <div class="main-title">GYM</div>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="exercises.html">Exercises</a>
+      <a href="diet.html">Diet</a>
+      <a href="consultation.html">Consultation</a>
+      <a href="gym.html">GYM</a>
+      <a href="watch.html">Watch</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="gym-section">
+      <h2>Find GYMs Near You</h2>
+      <form id="search-form" method="get">
+        <label for="location">Select your location:</label>
+        <select id="location" name="location" required>
+          <option value="">-- Choose a city --</option>
+          <option value="Muscat">Muscat</option>
+          <option value="Nizwa">Nizwa</option>
+          <option value="Sohar">Sohar</option>
+          <option value="Salalah">Salalah</option>
+          <option value="Sur">Sur</option>
+          <option value="Ibri">Ibri</option>
+          <option value="Bahla">Bahla</option>
+          <option value="Ibra">Ibra</option>
+          <option value="Khasab">Khasab</option>
+          <option value="Dakhiliyah">Dakhiliyah</option>
+          <option value="Musandam">Musandam</option>
+        </select>
+        <input type="button" value="Search" onclick="filterGyms()">
+      </form>
+
+      <h2>GYMs Available in Different Cities</h2>
+
+      <!-- Muscat Gym List -->
+      <h3>Muscat</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>GYM Name</th>
+            <th>Rating</th>
+            <th>Facilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fitness First Muscat</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>Cardio, Weights, Pool</td>
+          </tr>
+          <tr>
+            <td>Flex Gym Muscat</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>Weights, Yoga</td>
+          </tr>
+          <tr>
+            <td>Gold's Gym Muscat</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>Cardio, Sauna</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Nizwa Gym List -->
+      <h3>Nizwa</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>GYM Name</th>
+            <th>Rating</th>
+            <th>Facilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Gold's Gym Nizwa</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>Weights, Yoga</td>
+          </tr>
+          <tr>
+            <td>Nizwa Fitness Center</td>
+            <td>⭐⭐⭐</td>
+            <td>Cardio, Weights</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Sohar Gym List -->
+      <h3>Sohar</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>GYM Name</th>
+            <th>Rating</th>
+            <th>Facilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Iron Pump Sohar</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>Cardio, Weights</td>
+          </tr>
+          <tr>
+            <td>Sohar Power Gym</td>
+            <td>⭐⭐⭐</td>
+            <td>Weights, Yoga</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Salalah Gym List -->
+      <h3>Salalah</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>GYM Name</th>
+            <th>Rating</th>
+            <th>Facilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Active Gym Salalah</td>
+            <td>⭐⭐⭐⭐⭐</td>
+            <td>Cardio, Personal Coach, Sauna</td>
+          </tr>
+          <tr>
+            <td>Salalah Fit Zone</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>Cardio, Weights</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Sur Gym List -->
+      <h3>Sur</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>GYM Name</th>
+            <th>Rating</th>
+            <th>Facilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Muscles Club Sur</td>
+            <td>⭐⭐⭐</td>
+            <td>Cardio, Personal Training</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Ibri Gym List -->
+      <h3>Ibri</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>GYM Name</th>
+            <th>Rating</th>
+            <th>Facilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>FitZone Ibri</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>Cardio, Weights, Pool</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Bahla Gym List -->
+      <h3>Bahla</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>GYM Name</th>
+            <th>Rating</th>
+            <th>Facilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Gym for Life Bahla</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>Cardio, Zumba</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Ibra Gym List -->
+      <h3>Ibra</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>GYM Name</th>
+            <th>Rating</th>
+            <th>Facilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ActiveFit Gym Ibra</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>Cardio, Yoga, Sauna</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Khasab Gym List -->
+      <h3>Khasab</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>GYM Name</th>
+            <th>Rating</th>
+            <th>Facilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>OceanFit Gym Khasab</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>Weights, Pool</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Dakhiliyah Gym List -->
+      <h3>Dakhiliyah</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>GYM Name</th>
+            <th>Rating</th>
+            <th>Facilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Central Gym Dakhiliyah</td>
+            <td>⭐⭐⭐⭐</td>
+            <td>Cardio, Weights</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Musandam Gym List -->
+      <h3>Musandam</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>GYM Name</th>
+            <th>Rating</th>
+            <th>Facilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MountainFit Gym Musandam</td>
+            <td>⭐⭐⭐</td>
+            <td>Cardio, Weights</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HealthMate Team. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

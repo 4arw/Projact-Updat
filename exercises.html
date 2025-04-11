@@ -1,0 +1,316 @@
+
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>HealthMate - Exercises</title>
+    <link rel="stylesheet" href="Home.css">
+
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+    
+        body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          background-color: #f4f4f4;
+          color: #333;
+        }
+    
+        header {
+          background-color: #3e6891;
+          color: white;
+          padding: 20px 0;
+          text-align: center;
+        }
+    
+        nav ul {
+          list-style: none;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          background-color: #222;
+        }
+    
+        nav ul li {
+          margin: 0 15px;
+        }
+    
+        nav ul li a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+        }
+    
+        nav ul li a.active,
+        nav ul li a:hover {
+          color: #3e6891;
+        }
+    
+        main {
+          padding: 20px;
+          max-width: 1000px;
+          margin: auto;
+        }
+    
+        .hero {
+          text-align: center;
+          padding: 30px;
+          background-color: #d0e7ff;
+          border-radius: 10px;
+          margin-bottom: 30px;
+}
+
+    
+        h2, h3 {
+          color: #3e6891;
+          margin-bottom: 15px;
+        }
+    
+        section {
+          margin-bottom: 30px;
+        }
+    
+        form {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    
+        fieldset {
+          margin-bottom: 20px;
+          border: 1px solid #ccc;
+          padding: 15px;
+          border-radius: 5px;
+        }
+    
+        legend {
+          font-weight: bold;
+          color: #3e6891;
+        }
+    
+        input[type="radio"] {
+          margin-right: 10px;
+        }
+    
+        input[type="submit"] {
+          background-color: #3e6891;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+    
+        input[type="submit"]:hover {
+          background-color: #3e6891;
+        }
+    
+        ul {
+          list-style-type: disc;
+          padding-left: 40px;
+        }
+    
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 15px;
+        }
+    
+        table, th, td {
+          border: 1px solid #ccc;
+        }
+    
+        th, td {
+          padding: 10px;
+          text-align: center;
+        }
+    
+        th {
+          background-color: #3e6891;
+          color: white;
+        }
+    
+        footer {
+          text-align: center;
+          padding: 15px;
+          background-color: #222;
+          color: white;
+          margin-top: 40px;
+        }
+      </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+        <div class="branding">
+        <img src="IMG_5912[1].png" alt="HealthMate Logo" class="logo">
+        <span class="brand-small">HealthMate</span>
+        
+        </div>
+        
+        <div class="main-title">Exercises</div>
+        </div>
+        <br><br><br><br>
+        <nav>
+        <a href="index.html">Home</a>
+        <a href="exercises.html">Exercises</a>
+        <a href="diet.html">Diet</a>
+        <a href="consultation.html">Consultation</a>
+        <a href="gym.html">GYM</a>
+        <a href="watch.html">Watch</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h2>Exercise Plans Tailored for You</h2>
+                <p>Get stronger, leaner, and healthier with our guided workout plans.</p>
+            </section>
+    
+            <!-- New Section: Choose Exercise Type -->
+            <section class="choose-exercise">
+                <h3>Choose Exercise Type</h3>
+                
+                <form>
+                    <fieldset>
+                        <legend>Select Type:</legend>
+                        <input type="radio" id="free" name="exerciseType" value="free">
+                        <label for="free">Free Exercise</label><br>
+    
+                        <input type="radio" id="paid" name="exerciseType" value="paid">
+                        <label for="paid">Paid Exercise</label>
+                    </fieldset>
+    
+                    <br>
+    
+                    <fieldset>
+                        <legend>Select Level:</legend>
+                        <input type="radio" id="easy" name="level" value="easy">
+                        <label for="easy">Easy</label><br>
+    
+                        <input type="radio" id="middle" name="level" value="middle">
+                        <label for="middle">Middle</label><br>
+    
+                        <input type="radio" id="hard" name="level" value="hard">
+                        <label for="hard">Hard</label>
+                    </fieldset>
+    
+                    <br>
+                    <input type="submit" value="Start Workout">
+                </form>
+            </section>
+    
+            <section class="workout-types">
+                <h3>Workout Types</h3>
+                <ul>
+                    <li><strong>Cardio:</strong> Running, cycling, HIIT</li>
+                    <li><strong>Strength:</strong> Weight lifting, resistance bands</li>
+                    <li><strong>Flexibility:</strong> Yoga, stretching routines</li>
+                    <li><strong>Core:</strong> Planks, crunches, Pilates</li>
+                </ul>
+            </section>
+    
+            <section class="weekly-plan">
+                <h3>Weekly Workout Plan</h3>
+                <table>
+                  <!-- Weekly Workout Plan Section -->
+                  <tr>
+                      <th colspan="2">Weekly Workout Plan</th>
+                  </tr>
+                  <tr>
+                      <th>Day</th>
+                      <th>Exercise</th>
+                  </tr>
+                  <tr>
+                      <td>Monday</td>
+                      <td>Cardio + Abs</td>
+                  </tr>
+                  <tr>
+                      <td>Tuesday</td>
+                      <td>Strength Training</td>
+                  </tr>
+                  <tr>
+                      <td>Wednesday</td>
+                      <td>Yoga & Stretching</td>
+                  </tr>
+                  <tr>
+                      <td>Thursday</td>
+                      <td>HIIT</td>
+                  </tr>
+                  <tr>
+                      <td>Friday</td>
+                      <td>Upper Body</td>
+                  </tr>
+                  <tr>
+                      <td>Saturday</td>
+                      <td>Leg Day</td>
+                  </tr>
+                  <tr>
+                      <td>Sunday</td>
+                      <td>Rest</td>
+                  </tr>
+                  
+                  <!-- Additional Information Section -->
+                  <tr class="merged-cell">
+                      <td colspan="2">Additional Information</td>
+                  </tr>
+                  <tr>
+                      <td>Duration</td>
+                      <td>1 Hour per Session</td>
+                  </tr>
+                  <tr>
+                      <td>Goal</td>
+                      <td>Improve Fitness & Strength</td>
+                  </tr>
+                  <tr>
+                      <td>Focus Areas</td>
+                      <td>Cardio, Strength, Flexibility</td>
+                  </tr>
+                  <tr>
+                      <td>Intensity</td>
+                      <td>Moderate to High</td>
+                  </tr>
+                  
+                  <!-- Contact Information Section -->
+                  <tr class="merged-cell">
+                      <td colspan="2">Contact Information</td>
+                  </tr>
+                  <tr>
+                      <td>Email</td>
+                      <td>HealthMate@healthmate.com</td>
+                  </tr>
+                  <tr>
+                      <td>Phone</td>
+                      <td>+123 456 7890</td>
+                  </tr>
+                  <tr class="merged-cell">
+                      <td colspan="2">Follow us on social media!</td>
+                  </tr>
+                  
+              </table>
+            </section>
+
+            <!-- Hero Section -->
+<section class="hero">
+    <h2>Exercise Plans Tailored for You</h2>
+    <p>Get stronger, leaner, and healthier with our guided workout plans.</p>
+    <a href="#exercise-videos" style="display: inline-block; margin-top: 15px; background-color: #0077cc; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">Get Started</a>
+  </section>
+  
+        </main>
+    
+
+    <footer>
+        <p>&copy; 2025 HealthMate. All rights reserved.</p>
+    </footer>
+</body>
+</html>
