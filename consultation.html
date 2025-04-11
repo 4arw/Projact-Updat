@@ -139,20 +139,5 @@
     <p>&copy; 2025 HealthMate Team. All rights reserved.</p>
   </footer>
 
-  <script>
-    // JavaScript to show/hide consultation sections
-    document.getElementById("consultChoiceForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const type = document.querySelector('input[name="consultType"]:checked').value;
-      if (type === "ai") {
-        document.getElementById("aiSection").style.display = "block";
-        document.getElementById("expertSection").style.display = "none";
-      } else {
-        document.getElementById("aiSection").style.display = "none";
-        document.getElementById("expertSection").style.display = "block";
-      }
-    });
-  </script>
-
 </body>
 </html>
